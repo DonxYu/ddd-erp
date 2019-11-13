@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: erpservice
+  profiles:
+    active: dev,flyway
+  flyway:
+    enabled: false
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+server:
+  port: 8888
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
